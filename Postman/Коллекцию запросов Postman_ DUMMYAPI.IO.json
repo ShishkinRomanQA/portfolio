@@ -1,0 +1,232 @@
+{
+	"info": {
+		"_postman_id": "3c1805f0-a7ae-4abb-beb0-c441e97cabeb",
+		"name": "DUMMYAPI.IO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27160242"
+	},
+	"item": [
+		{
+			"name": "Получение списка из 55 шт",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "app-id",
+						"value": "64ec49f03af02a77702dcbe0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://dummyapi.io/data/v1/user?page=1&limit=55",
+					"protocol": "https",
+					"host": [
+						"dummyapi",
+						"io"
+					],
+					"path": [
+						"data",
+						"v1",
+						"user"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "55"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получить пользователя по id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "app-id",
+						"value": "64ec49f03af02a77702dcbe0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://dummyapi.io/data/v1/user/60d0fe4f5311236168a109ca",
+					"protocol": "https",
+					"host": [
+						"dummyapi",
+						"io"
+					],
+					"path": [
+						"data",
+						"v1",
+						"user",
+						"60d0fe4f5311236168a109ca"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создать пользователя (основный данные)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "app-id",
+						"value": "64ec49f03af02a77702dcbe0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"mr\",\r\n    \"firstName\": \"Andr123\",\r\n    \"lastName\": \"Robert123\",\r\n    \"email\": \"andre.robert123@example.com\"\r\n    }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dummyapi.io/data/v1/user/create",
+					"protocol": "https",
+					"host": [
+						"dummyapi",
+						"io"
+					],
+					"path": [
+						"data",
+						"v1",
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Удаление по id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "app-id",
+						"value": "64ec49f03af02a77702dcbe0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://dummyapi.io/data/v1/user/64ec5067fcbadce9a35395c9",
+					"protocol": "https",
+					"host": [
+						"dummyapi",
+						"io"
+					],
+					"path": [
+						"data",
+						"v1",
+						"user",
+						"64ec5067fcbadce9a35395c9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Изменение данных по id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "app-id",
+						"value": "64ec49f03af02a77702dcbe0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"picture\": \"https://randomuser.me/api/portraits/women/58.jpg\",\r\n    \"gender\": \"male\",\r\n    \"dateOfBirth\": \"1111-04-30T19:26:49.610Z\",\r\n    \"phone\": \"1111111\",\r\n    \"location\": {\r\n        \"street\": \"9614, SÃ¸ndermarksvej\",\r\n        \"city\": \"Kongsvinger\",\r\n        \"state\": \"Nordjylland\",\r\n        \"country\": \"Denmark\",\r\n        \"timezone\": \"-9:00\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dummyapi.io/data/v1/user/64ec53c3fcbadc275e53996c",
+					"protocol": "https",
+					"host": [
+						"dummyapi",
+						"io"
+					],
+					"path": [
+						"data",
+						"v1",
+						"user",
+						"64ec53c3fcbadc275e53996c"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
